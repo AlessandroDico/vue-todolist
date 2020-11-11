@@ -5,10 +5,21 @@ al click su un item della lista, il todo viene rimosso
 BONUS: intercettare anche il tasto "ENTER" per aggiungere un nuovo todo
 */
 
+
+// definire una lista di todo e stamparli in pagina
+//fare un array di stringhe
+//stamparli in pagina tramite v-for
 var app = new Vue ({
     el: '#root',
     data: {
-
+        todoList: [
+            'fare la spesa',
+            'portare fuori il cane',
+            'studiare',
+            'allenarsi',
+            'cucinare',
+            'nerdare',
+        ],
     },
     methods: {
 
