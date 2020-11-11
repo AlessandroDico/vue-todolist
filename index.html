@@ -10,19 +10,23 @@
     <body>
 
         <div id="root">
+            <form action="">
+                <div class="input-container">
+                    <input type="text" placeholder="inserisci un nuovo todo"
+                    v-model="todoAdd" v-on:keydown.enter="pushInArray()">
 
-            <input type="text" placeholder="inserisci un nuovo todo"
-            v-model="todoAdd" v-on:keydown.enter="pushInArray()">
+                    <button type="button" @click="pushInArray()"> Aggiungi </button>
+                </div>
+            </form>
 
-            <button type="button" @click="pushInArray()"> Aggiungi </button>
-
-
+        <div class="todo-list-container">
             <ul>
                 <li v-for="(item, index) in todoList" @click="deleteTodo(index)">
-<!-- ad ogni iterazione stampa un item fino alla fine dell'array -->
+                    <!-- ad ogni iterazione stampa un item fino alla fine dell'array -->
                     {{ item }}
                 </li>
             </ul>
+        </div>
 
         </div>
 

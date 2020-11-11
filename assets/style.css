@@ -1,3 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+}
+
 ul {
     list-style-type: none;
 }
+
+/*-----------------fine regole generiche------------*/
+
+form, .todo-list-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.todo-list-container {
+    text-align: center;
+}
+
+input {
+    font-size: 20px;
+    padding: 8px 30px;
+    outline: none;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid darkcyan;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #f8f8f8;
+    background-color: #098bc8;
+}
+
+li {
+    font-size: 25px;
+    margin: 5px 0;
+    color: #0062ae;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**/
