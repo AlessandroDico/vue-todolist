@@ -23,9 +23,13 @@ var app = new Vue ({
             'cucinare',
             'nerdare',
         ],
+        todoAdd: '',
     },
     methods: {
-
+        pushInArray() {
+            this.todoList.push(this.todoAdd);
+            this.todoAdd = '';
+        }
     },
 })
 

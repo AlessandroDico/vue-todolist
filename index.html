@@ -11,7 +11,11 @@
 
         <div id="root">
 
-        
+            <input type="text" placeholder="inserisci un nuovo todo" v-model="todoAdd" >
+            <button type="button" @click="pushInArray()"> Aggiungi </button>
+
+            <!-- <p> {{ todoAdd }} </p> -->
+
             <ul>
                 <li v-for="item in todoList">
 <!-- ad ogni iterazione stampa un item fino alla fine dell'array -->
