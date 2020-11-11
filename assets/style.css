@@ -14,13 +14,10 @@ ul {
 
 /*-----------------fine regole generiche------------*/
 
-form, .todo-list-container {
+.input-container, .todo-list-container {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-}
-
-.todo-list-container {
     text-align: center;
 }
 

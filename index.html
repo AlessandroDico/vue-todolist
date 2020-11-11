@@ -10,14 +10,12 @@
     <body>
 
         <div id="root">
-            <form action="">
                 <div class="input-container">
                     <input type="text" placeholder="inserisci un nuovo todo"
                     v-model="todoAdd" v-on:keydown.enter="pushInArray()">
 
                     <button type="button" @click="pushInArray()"> Aggiungi </button>
                 </div>
-            </form>
 
         <div class="todo-list-container">
             <ul>
