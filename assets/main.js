@@ -29,7 +29,12 @@ var app = new Vue ({
         pushInArray() {
             this.todoList.push(this.todoAdd);
             this.todoAdd = '';
-        }
+        },
+        deleteTodo(index) {
+            this.todoList.splice(index, 1);
+// uso la funzione splice() per rimuovere un elemento
+//il valore 1 serve per rimuovere un elemento alla volta... se aumento il valore, allo scatenarsi della funzione(in questo caso con il click) mi toglie tanti elementi quandi il valore del numero (se parto dall'alto)
+}
     },
 })
 
