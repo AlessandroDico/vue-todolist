@@ -43,13 +43,18 @@ button:hover {
 
 li {
     font-size: 25px;
-    margin: 5px 0;
-    color: #0062ae;
+    margin: 10px 0;
     cursor: pointer;
 }
 
+/* classi che cambiano per gli item */
+.blue {
+    color: #0062ae;
+}
 
-
+.red {
+    color: red;
+}
 
 
 

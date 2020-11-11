@@ -10,21 +10,33 @@
     <body>
 
         <div id="root">
-                <div class="input-container">
-                    <input type="text" placeholder="inserisci un nuovo todo"
-                    v-model="todoAdd" v-on:keydown.enter="pushInArray()">
+            <div class="input-container">
+                <input type="text" placeholder="inserisci un nuovo todo"
+                v-model="todoAdd" v-on:keydown.enter="pushInArray()">
 
-                    <button type="button" @click="pushInArray()"> Aggiungi </button>
-                </div>
+                <button type="button" @click="pushInArray()"> Aggiungi </button>
+            </div>
 
-        <div class="todo-list-container">
-            <ul>
-                <li v-for="(item, index) in todoList" @click="deleteTodo(index)">
-                    <!-- ad ogni iterazione stampa un item fino alla fine dell'array -->
-                    {{ item }}
-                </li>
-            </ul>
-        </div>
+            <div class="todo-list-container">
+                <ul>
+                    <li class="paragraph">
+                        <p>
+                            fai un singolo click per le voci da postporre
+                        </p>
+                        <p>
+                            fai doppio click per eliminare una voce
+                        </p>
+                    </li>
+                    <li v-for="(item, index) in todoList"
+                    v-on:dblclick="deleteTodo(index)"
+                    :class="item.changeState"
+                    @click="postponedItem(item)">
+                        <!-- ad ogni iterazione stampa un item fino alla fine dell'array -->
+                        <i class="fas fa-check"></i>
+                        {{ item.text }}
+                    </li>
+                </ul>
+            </div>
 
         </div>
 
