@@ -11,7 +11,9 @@
 
         <div id="root">
 
-            <input type="text" placeholder="inserisci un nuovo todo" v-model="todoAdd" >
+            <input type="text" placeholder="inserisci un nuovo todo"
+            v-model="todoAdd" v-on:keydown.enter="pushInArray()">
+
             <button type="button" @click="pushInArray()"> Aggiungi </button>
 
 
